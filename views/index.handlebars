@@ -1,0 +1,42 @@
+<main>
+  <div class="container1">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>First World Problems</h1>
+        <h2>You think you have problems?</h2>
+        <h2>Wait until you hear about that time I went to Starbucks...</h2>
+      </div>
+    </div>
+  </div>
+<!-- Code draws on database to populate container with entries from table -->
+  <div class="container2">
+    <div class="row">
+      <div class="col s12">
+        {{#each problems}}
+          {{this.name}}
+        {{/each}}
+
+        <form action="/problems?" method="GET">
+          <button type="submit" label="submit" value="True">SIGH</button>
+        </form>  
+      </div>
+    </div>
+  </div>
+</main>
+
+<div class="footer">
+  <div class="row">
+    <div class="col l6 s12">
+      <h1 class="white-text">More problems? Fill out this form</h5>
+      <a href="https://goo.gl/forms/1X0zVgONihZ3hUBz1">Click me to fill out the form!</a>
+    </div>
+    <div class="col l4 offset-l2 s12">
+      <h1 class="white-text">More About Me</h5>
+        <ul>
+          <li><a class="grey-text text-lighten-3" href="https://github.com/mlin2814">Github</a></li>
+          <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/matthew-lin-75970890">LinkedIn</a></li>
+          <li><a class="grey-text text-lighten-3" href="https://sheltered-taiga-20526.herokuapp.com/">Portfolio</a></li>
+        </ul>
+    </div>
+  </div>
+</div>
