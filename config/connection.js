@@ -1,4 +1,7 @@
+//Package needed
 var mysql = require('mysql');
+
+//Connection details
 var connection = mysql.createConnection({
     port: 3306,
     host: 'localhost',
@@ -7,6 +10,7 @@ var connection = mysql.createConnection({
     database: 'problems_db'
 });
 
+//Console log of failure/success of connection
 connection.connect(function(err) {
     if (err) {
         console.error('error connecting: ' + err.stack);
